@@ -1,7 +1,6 @@
 // loadbalancer.h
 #ifndef CS210_PROGRAM2_LOADBALANCER_H
 #define CS210_PROGRAM2_LOADBALANCER_H
-#endif
 
 #include "request.h"
 #include <queue>
@@ -27,3 +26,4 @@ class loadbalancer {
         // stack<request> requestQueue;
 
 };
+#endif

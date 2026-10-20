@@ -1,6 +1,7 @@
 #include "request.h"
 #include "webserver.cpp"
 #include "loadbalancer.h"
+#include "loadbalancer.cpp"
 
 #include <iostream>
 #include <ctime>
@@ -15,8 +16,8 @@ static int ps = 0;
 request createRandomRequest() {
     stringstream ips, ipd;
     request r;
-    ips << (rand() % 256); << "." << (rand() % 256); << "." << (rand() % 256); << "." << (rand() % 256);
-    ipd << (rand() % 256); << "." << (rand() % 256); << "." << (rand() % 256); << "." << (rand() % 256);
+    ips << (rand() % 256) << "." << (rand() % 256) << "." << (rand() % 256) << "." << (rand() % 256);
+    ipd << (rand() % 256) << "." << (rand() % 256) << "." << (rand() % 256) << "." << (rand() % 256);
     r.source = ips.str();
     r.destination = ipd.str();
     r.processTime = (rand() % 500);
